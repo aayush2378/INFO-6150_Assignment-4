@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Feedback</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <main>
+            <h2>Feedback Form</h2>
+            <h4> Note : Fields marked with an asterisk(*) are mandatory</h4>
+            <form method="post" id="myForm">
+                <div class="control">
+                    <label>Title*:</label>
+                    <input type="radio" name="title" id="miss" value="Miss" required="required" />Miss
+                    <input type="radio" name="title" id="mr" value="Mr" required="required" />Mr.
+                    <input type="radio" name="title" id="mrs" value="Mrs" required="required" />Mrs.
+                </div>
+                <div class="control">
+                    <label for="firstName">First Name*:</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name" required />
+                </div>
+                <div id="error_firstName" style="display: none; color: red;">
+                    Enter valid first name. Only Text allowed (Minimum length: 2 Characters <br> Maximum length: 25 Characters).
+                    <br><br>
+                </div>
+                <div class="control">
+                    <label for="lastName">Last Name*:</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required />
+                </div>
+                <div id="error_lastName" style="display: none; color: red;">
+                    Enter valid last name. Only Text allowed (Minimum length: 2 Characters <br> Maximum length: 25 Characters).
+                    <br><br>
+                </div>
+                <div class="control">
+                    <label for="emailId">Email Id*:</label>
+                    <input type="text" name="emailId" id="emailId" placeholder="username@northeastern.edu" required />
+                </div>
+                <div id="error_emailId" style="display: none; color: red;">
+                    Please enter a valid email address. 
+                    <br><br>
+                </div>
+                <div class="control">
+                    <label for="phoneNumber">Phone Number*:</label>
+                    <input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required />
+                </div>
+                <div id="error_phoneNumber" style="display: none; color: red;">
+                    Please enter a valid phone number in the aforementioned format. 
+                    <br><br>
+                </div>
+                <div class="control">
+                    <label for="streetAddress1">Street Address 1*:</label>
+                    <input type="text" name="streetAddress1" id="streetAddress1" placeholder="Street Address 1"
+                        required />
+                </div>
+                <div id="error_streetAddress1" style="display: none; color: red;">
+                    Please enter valid street address (Minimum length: 2 Characters <br> Maximum length: 50 Characters).
+                    <br><br>
+                </div>
+                <div class="control">
+                    <label for="streetAddress2">Street Address 2:</label>
+                    <input type="text" name="streetAddress2" id="streetAddress2" placeholder="Street Address 2" />
+                </div>
+                <div class="control">
+                    <label for="city">City*:</label>
+                    <input type="text" name="city" id="city" placeholder="City" required />
+                </div>
+                <div id="error_city" style="display: none; color: red;">
+                    Please enter valid City (Minimum length: 2 Characters <br> Maximum length: 25 Characters).
+                    <br><br>
+                </div>
+                <div class="control">
+                    <label for="state">State*:</label>
+                    <input type="text" name="state" id="state" placeholder="State" required />
+                </div>
+                <div id="error_state" style="display: none; color: red;">
+                  Please enter a valid state(Minimum length: 2 Characters <br> Maximum length: 25 Characters).
+                    <br><br>
+                </div>
+
+                <div class="control">
+                    <label for="zipcode">ZipCode*:</label>
+                    <input type="text" name="zipcode" id="zipcode" placeholder="xxxxx" required />
+                </div>
+                <div id="error_zipcode" style="display: none; color: red;">
+                     Please enter a valid zipcode.
+                    <br><br>
+                </div>
+                <div class="control">
+                    <label for="heardfrom">How did you hear about us?*:</label>
+                    <input type='checkbox' id="heardfrom1" name="heardfrom" value="facebook" /> Facebook
+                    <input type='checkbox' id="heardfrom2" name="heardfrom" value="google" /> Google
+                    <input type='checkbox' id="heardfrom3" name="heardfrom" value="yelp" /> Yelp
+                </div>
+                <div class="control">
+                    <label for="rating">How would you rate us?*:</label>
+                    <select name="rating" id="ratingSelect" required="required">
+                        <option value="">Please select a rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div id="error_rating" style="display: none; color: red;">
+                    Please select an option.
+                    <br><br>
+                </div>
+                <br><br>
+                <div class="control">
+                    <div id="dynamicCheckbox" style="display: none">
+                        <label><span id="spanTag">Yelp</span></label>
+                        <input type="checkbox" id="checkboxSelectDynamic" name="source" value="dummy" />
+                    </div>
+                </div>
+                <br>
+                <div class="control">
+                    <div id="text_area" style="display: none">
+                        <label for="text-area">Suggestions*:</label>
+                        <textarea id="text-area" name="text_area" placeholder="Suggestions" rows="1" cols="25"></textarea>
+                    </div>
+                    <div id="error_text-area" style="display: none; color: red;">
+                        Please enter a valid comment.
+                    </div>
+                </div>
+                <br><br>
+                <div class="control">
+                    <label for="comments">Comments*:</label>
+                    <textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required="required"></textarea>
+                </div>
+                <div class="btns">
+                    <input type="Submit" id="submitButton" disabled>
+                    <input type="Reset">
+                </div>
+            </form>
+        </main>
+    </div>
+    <hr>
+    <br><br>
+    <p>Form Details:</p>
+    <table id="table">
+        <tr>
+            <th>Title</th>
+            <th>First name</th>
+            <th>Last Name</th>
+            <th>Email ID</th>
+            <th>Phone</th>
+            <th>Street Address 1</th>
+            <th>Street Address 2</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zipcode</th>
+            <th>Reference</th>
+            <th>Comments</th>
+            <th>Rating</th>
+            <th>Suggestions</th>
+        </tr>
+    </table>
+    <script src="script.js"> </script>
+</body>
+
+</html>

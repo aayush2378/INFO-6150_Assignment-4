@@ -1,0 +1,92 @@
+label {
+    float: left;
+    width: 150px;
+}
+
+#container {
+    width: 700px;
+    margin: auto;
+    background-color: beige;
+}
+
+main {
+    padding: 50px;
+}
+
+.table {
+    border-color: grey;
+    align-items: center;
+}
+
+table {
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+}
+
+table,
+th,
+td {
+    border: none;
+    padding: 18px;
+}
+
+th {
+    background-color: grey;
+    color: rgb(241, 240, 255);
+    text-align: center;
+}
+
+tr {
+    color: rgb(83, 81, 81);
+    background-color: rgb(238, 255, 255);
+}
+
+p {
+    text-align: center;
+    font-size: large;
+}
+
+.control {
+    margin-bottom: 20px;
+}
+
+h4 {
+    text-decoration: none;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    text-decoration: none;
+    margin: 0 0 20px 0;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#text_area {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    div {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    table {
+        width: 100%;
+    }
+}
